@@ -28,7 +28,7 @@ mongoose.connect(dbConfig.url, {
 });
 
 // define a simple route
-app.get('/', (req, res) => {
+app.get('/home/notes', (req, res) => {
     res.json({ "message": "Welcome to EasyNotes application.\nTake notes quickly. Organize and keep track of all your notes." });
 });
 
