@@ -31,7 +31,9 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
     Note.find()
         .then(notes => {
-            res.send(notes);
+            res.send({
+                status: true,
+                data:notes});
         }).catch(err => {
             res.status(500).send({
                 message: err.message || "Some error occurred while retrieving notes."
