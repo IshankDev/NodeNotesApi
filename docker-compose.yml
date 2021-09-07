@@ -12,5 +12,6 @@ services:
   mongo:
     container_name: mongo
     image: mongo
+    command: mongod --port 24331
     ports:
       - "24331:24331"
